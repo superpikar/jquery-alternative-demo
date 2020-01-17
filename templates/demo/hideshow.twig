@@ -15,12 +15,24 @@
       </div>
     </div>
   </div>
-
   <hr/>
+
   <h2>Unpoly</h2>
-  <div class="row mt-2 my-4"></div>
-
+  <div class="unpoly row mt-2 my-4">
+    <div class="code col-md-6">
+     this is code
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary">
+        Toggle
+      </button>
+      <div class="text d-none">
+        this is sentence of the year!
+      </div>
+    </div>
+  </div>
   <hr/>
+
   <h2>Stimulus</h2>
   <div class="stimulus row mt-2 my-4" data-controller="hello">
     <div class="code col-md-6">
@@ -35,8 +47,8 @@
       </div>
     </div>
   </div>
-
   <hr/>
+
   <h2>Alpine.js</h2>
   <div class="alpine row mt-2 my-4" x-data="{ show: false }">
     <div class="code col-md-6">
@@ -51,6 +63,7 @@
       </div>
     </div>
   </div>
+  <hr/>
 {% endblock %}
 
 {% block footerScript %}
@@ -58,6 +71,12 @@
     /* ------------------ jQuery ------------------ */
     $('.jquery .btn').click(function() {
       $('.jquery .text').toggleClass('d-none');
+    });
+
+    /* ------------------ unpoly ------------------ */
+    up.on('click', '.unpoly .btn', function(event, element) {
+      const buttonEl = document.querySelector('.unpoly .text');
+      up.element.toggleClass(buttonEl, 'd-none');
     });
 
     /* ------------------ stimulus ------------------ */
