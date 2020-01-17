@@ -1,3 +1,29 @@
+categoryGroups:
+  1fc5062f-7f11-4bf0-901e-e8e93047779b:
+    name: 'News Category'
+    handle: newsCategory
+    structure:
+      uid: cb361319-cd4e-4844-b5fe-e698839ab065
+      maxLevels: null
+    siteSettings:
+      1693f771-58b7-42a3-91c7-467d2273f6d6:
+        hasUrls: false
+        uriFormat: null
+        template: null
+    fieldLayouts:
+      0869b073-ee4c-4842-8932-ce4daba93b80:
+        tabs:
+          -
+            name: Common
+            sortOrder: 1
+            fields:
+              9a6eed60-dc9e-4c74-b570-b942f042f078:
+                required: true
+                sortOrder: 2
+              ff74e9f2-c32a-4d18-8c2c-842066d23bc5:
+                required: true
+                sortOrder: 1
+dateModified: 1579233931
 email:
   fromEmail: admin@yahoo.com
   fromName: jquery-alternative-demo
@@ -5,6 +31,112 @@ email:
 fieldGroups:
   8d6af961-64b6-4e9f-b086-91639ac6233e:
     name: Common
+fields:
+  1587f9b0-f6c7-49ff-83d0-d5f31c714112:
+    name: 'News Category'
+    handle: newsCategory
+    instructions: ''
+    searchable: false
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      sources: '*'
+      source: 'group:1fc5062f-7f11-4bf0-901e-e8e93047779b'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 8d6af961-64b6-4e9f-b086-91639ac6233e
+  592811ab-f387-4f21-802b-aacdbe10c2b2:
+    name: Writer
+    handle: writer
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: string
+    contentColumnType: string
+    fieldGroup: 8d6af961-64b6-4e9f-b086-91639ac6233e
+  9a6eed60-dc9e-4c74-b570-b942f042f078:
+    name: Body
+    handle: body
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: '1'
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 8d6af961-64b6-4e9f-b086-91639ac6233e
+  ff74e9f2-c32a-4d18-8c2c-842066d23bc5:
+    name: 'Background Color'
+    handle: backgroundColor
+    instructions: ''
+    searchable: false
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Color
+    settings:
+      defaultColor: '#000000'
+    contentColumnType: string(7)
+    fieldGroup: 8d6af961-64b6-4e9f-b086-91639ac6233e
+sections:
+  981c2238-6d04-4309-ab9e-fecb8e11d042:
+    name: News
+    handle: news
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      1693f771-58b7-42a3-91c7-467d2273f6d6:
+        enabledByDefault: true
+        hasUrls: false
+        uriFormat: ''
+        template: null
+    entryTypes:
+      727d0c06-8a12-498e-9500-412c981581b4:
+        name: News
+        handle: news
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          2119e095-c0fa-4bee-b294-9c75f21388fa:
+            tabs:
+              -
+                name: Common
+                sortOrder: 1
+                fields:
+                  1587f9b0-f6c7-49ff-83d0-d5f31c714112:
+                    required: true
+                    sortOrder: 1
+                  592811ab-f387-4f21-802b-aacdbe10c2b2:
+                    required: true
+                    sortOrder: 2
+                  9a6eed60-dc9e-4c74-b570-b942f042f078:
+                    required: true
+                    sortOrder: 3
 siteGroups:
   1400f314-aced-4092-9772-81054a2ec6a7:
     name: jquery-alternative-demo
