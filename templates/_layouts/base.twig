@@ -4,7 +4,6 @@
   <head>
     <title>{{ pageTitle|default('Home') }} | {{ siteName }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/unpoly@0.61.0/dist/unpoly.min.css" integrity="sha384-Au6LjS9fxDpwn3+26YmukmOumZUmryd8ONenkVIoH4eEPH1tACqLsVfqz9tBrvQy" crossorigin="anonymous">
     <style>
       iframe {
@@ -14,24 +13,14 @@
     </style>
   </head>
   <body>
+    {% include "_includes/navbar.twig" %}
     <div class="container my-5">
-      <div class="row">
-        <div class="col-md-2">
-          {% include "_includes/navigation.twig" %}
-        </div>
-        <div class="col-md-10">
-          {% block content %}{% endblock %}
-        </div>
-      </div>
+      {% block content %}{% endblock %}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.8.1/dist/alpine.min.js"></script>
     <script src="https://unpkg.com/unpoly@0.61.0/dist/unpoly.min.js" integrity="sha384-gW6zzUz/Kx42R/cIyfZeFdlW18HuD/vtSCfsv6cdlfeg3CRqh89KzWER1dQ1i4BJ" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
     {% block footerScript %}{% endblock %}
   </body>
 </html>
