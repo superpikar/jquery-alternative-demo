@@ -1,5 +1,47 @@
 {% extends "_layouts/base.twig" %}
 
 {% block content %}
-  <h2>this is tabs</h2>
+  <h2>jQuery</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522jquery%2520col-md-5%2522%253E%250A%2520%2520%253Cul%2520class%253D%2522nav%2520nav-tabs%2522%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2520active%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522home%2522%253EHomepage%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522profile%2522%253EMy%2520Profile%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%253C%252Ful%253E%250A%2520%2520%253Cdiv%2520class%253D%2522tab-content%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520data-tab%253D%2522home%2522%2520class%253D%2522%2522%253Ethis%2520is%2520home%2520tab%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520data-tab%253D%2522profile%2522%2520class%253D%2522d-none%2522%253Ethis%2520is%2520profile%2520tab%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F*%2520credit%2520%253A%2520https%253A%252F%252Fstackoverflow.com%252Fa%252F54928078%252F1843755%2520*%252F%250A%2520%2520%2524('.jquery%2520.nav-link').click(function()%2520%257B%250A%2520%2520%2520%2520%252F%252FToggle%2520tab%2520link%250A%2520%2520%2520%2520%2524(this).addClass('active')%253B%250A%2520%2520%2520%2520%2524(this).parent().siblings().find('.nav-link').removeClass('active')%253B%250A%250A%2520%2520%2520%2520%252F%252FToggle%2520target%2520tab%250A%2520%2520%2520%2520const%2520currentTab%2520%253D%2520%2524(this).attr('data-tab')%253B%250A%2520%2520%2520%2520const%2520%2524currentTabEl%2520%253D%2520%2524(%2560.tab-content%2520%255Bdata-tab%253D%2524%257BcurrentTab%257D%255D%2560)%253B%250A%2520%2520%2520%2520%2524currentTabEl.removeClass('d-none')%253B%250A%2520%2520%2520%2520%2524currentTabEl.siblings().addClass('d-none')%253B%250A%2520%2520%257D)%253B%250A%253C%252Fscript%253E"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
+    </div>
+    <div class="jquery col-md-4">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" data-tab="home">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-tab="profile">My Profile</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div data-tab="home" class="">this is home tab</div>
+        <div data-tab="profile" class="d-none">this is profile tab</div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+{% endblock %}
+
+{% block footerScript %}
+  <script>
+    /* ------------------ jQuery ------------------ */
+    /* credit : https://stackoverflow.com/a/54928078/1843755 */
+    $('.jquery .nav-link').click(function() {
+      //Toggle tab link
+      $(this).addClass('active');
+      $(this).parent().siblings().find('.nav-link').removeClass('active');
+
+      //Toggle target tab
+      const currentTab = $(this).attr('data-tab');
+      const $currentTabEl = $(`.tab-content [data-tab=${currentTab}]`);
+      $currentTabEl.removeClass('d-none');
+      $currentTabEl.siblings().addClass('d-none');
+    });
+  </script>
 {% endblock %}
