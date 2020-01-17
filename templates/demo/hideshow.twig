@@ -3,7 +3,7 @@
 {% block content %}
   <h2>jQuery</h2>
   <div class="jquery row mt-2 my-4">
-    <div class="col-md-6">
+    <div class="code col-md-6">
      this is code
     </div>
     <div class="col-md-6">
@@ -23,7 +23,7 @@
   <hr/>
   <h2>Stimulus</h2>
   <div class="stimulus row mt-2 my-4" data-controller="hello">
-    <div class="col-md-6">
+    <div class="code col-md-6">
      this is code
     </div>
     <div class="col-md-6">
@@ -38,7 +38,19 @@
 
   <hr/>
   <h2>Alpine.js</h2>
-  <div class="row mt-2 my-4"></div>
+  <div class="alpine row mt-2 my-4" x-data="{ show: false }">
+    <div class="code col-md-6">
+      this is code
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" @click="show = !show">
+        Toggle
+      </button>
+      <div class="text" :class="{'d-none': !show}">
+        this is sentence of the year!
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block footerScript %}
