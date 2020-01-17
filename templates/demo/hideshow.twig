@@ -22,8 +22,18 @@
 
   <hr/>
   <h2>Stimulus</h2>
-  <div class="row mt-2 my-4">
-
+  <div class="stimulus row mt-2 my-4" data-controller="hello">
+    <div class="col-md-6">
+     this is code
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" data-action="click->hello#toggle">
+        Toggle
+      </button>
+      <div class="text d-none" data-target="hello.text">
+        this is sentence of the year!
+      </div>
+    </div>
   </div>
 
   <hr/>
@@ -42,13 +52,11 @@
     const application = Stimulus.Application.start();
     application.register("hello", class extends Stimulus.Controller {
       static get targets() {
-        return [
-          'text'
-        ];
+        return ['text'];
       }
 
-      toggleClass() {
-
+      toggle() {
+        this.textTarget.classList.toggle('d-none');
       }
     })
   </script>
