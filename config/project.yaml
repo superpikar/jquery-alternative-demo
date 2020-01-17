@@ -23,7 +23,7 @@ categoryGroups:
               ff74e9f2-c32a-4d18-8c2c-842066d23bc5:
                 required: true
                 sortOrder: 1
-dateModified: 1579233931
+dateModified: 1579234162
 email:
   fromEmail: admin@yahoo.com
   fromName: jquery-alternative-demo
@@ -100,6 +100,11 @@ fields:
       defaultColor: '#000000'
     contentColumnType: string(7)
     fieldGroup: 8d6af961-64b6-4e9f-b086-91639ac6233e
+plugins:
+  seeder:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   981c2238-6d04-4309-ab9e-fecb8e11d042:
     name: News

@@ -1,6 +1,11 @@
 ## Instructions
 
-- clone 
+- clone the repo
+
+- install dependency
+    ```
+    composer install
+    ```
 
 - create database
 
@@ -32,3 +37,5 @@
 - setup craft cms, select one of the options below to start the installation process :
     - by GUI : open http://jquery-alternative-demo.test/admin/install
     - by CLI : run `./craft setup` 
+    
+- 

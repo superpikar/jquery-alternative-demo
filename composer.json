@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.0.0",
+    "studioespresso/craft-seeder": "3.2.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {
