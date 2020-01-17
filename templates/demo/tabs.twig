@@ -1,8 +1,10 @@
 {% extends "_layouts/base.twig" %}
 
+{% set pageTitle = 'Tabs' %}
+
 {% block content %}
   <h2>jQuery</h2>
-  <div class="row mt-2 my-4">
+  <div  class="row mt-2 my-4">
     <div class="code col-md-8">
       <iframe
         src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522jquery%2520col-md-5%2522%253E%250A%2520%2520%253Cul%2520class%253D%2522nav%2520nav-tabs%2522%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2520active%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522home%2522%253EHomepage%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522profile%2522%253EMy%2520Profile%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%253C%252Ful%253E%250A%2520%2520%253Cdiv%2520class%253D%2522tab-content%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520data-tab%253D%2522home%2522%2520class%253D%2522%2522%253Ethis%2520is%2520home%2520tab%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520data-tab%253D%2522profile%2522%2520class%253D%2522d-none%2522%253Ethis%2520is%2520profile%2520tab%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F*%2520credit%2520%253A%2520https%253A%252F%252Fstackoverflow.com%252Fa%252F54928078%252F1843755%2520*%252F%250A%2520%2520%2524('.jquery%2520.nav-link').click(function()%2520%257B%250A%2520%2520%2520%2520%252F%252FToggle%2520tab%2520link%250A%2520%2520%2520%2520%2524(this).addClass('active')%253B%250A%2520%2520%2520%2520%2524(this).parent().siblings().find('.nav-link').removeClass('active')%253B%250A%250A%2520%2520%2520%2520%252F%252FToggle%2520target%2520tab%250A%2520%2520%2520%2520const%2520currentTab%2520%253D%2520%2524(this).attr('data-tab')%253B%250A%2520%2520%2520%2520const%2520%2524currentTabEl%2520%253D%2520%2524(%2560.tab-content%2520%255Bdata-tab%253D%2524%257BcurrentTab%257D%255D%2560)%253B%250A%2520%2520%2520%2520%2524currentTabEl.removeClass('d-none')%253B%250A%2520%2520%2520%2520%2524currentTabEl.siblings().addClass('d-none')%253B%250A%2520%2520%257D)%253B%250A%253C%252Fscript%253E"
@@ -26,6 +28,29 @@
     </div>
   </div>
   <hr/>
+
+  <h2>Unpoly</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253C!--%2520url%2520%253A%2520%252Fdemo%252Ftabs%2520--%253E%250A%253Cdiv%2520class%253D%2522unpoly%2520col-md-4%2522%253E%250A%2520%2520%253Cul%2520class%253D%2522nav%2520nav-tabs%2522%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2520active%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522%252Funpoly%252Ftab-home%2522%253EHomepage%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522nav-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520class%253D%2522nav-link%2522%2520href%253D%2522%2523%2522%2520data-tab%253D%2522%252Funpoly%252Ftab-profile%2522%253EMy%2520Profile%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%253C%252Ful%253E%250A%2520%2520%253Cdiv%2520class%253D%2522unpoly-content%2522%253E%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F%252F%2520default%2520tab%250A%2520%2520up.reload('.unpoly-content'%252C%2520%257B%250A%2520%2520%2520%2520url%253A%2520'%252Funpoly%252Ftab-home'%252C%250A%2520%2520%2520%2520history%253A%2520false%252C%250A%2520%2520%257D)%253B%250A%2520%2520up.on('click'%252C%2520'.unpoly%2520.nav-link'%252C%2520function(event%252C%2520element)%2520%257B%250A%2520%2520%2520%2520%252F%252FToggle%2520tab%2520link%250A%2520%2520%2520%2520up.element.toggleClass(element%252C%2520'active')%253B%250A%2520%2520%2520%2520const%2520url%2520%253D%2520element.attributes%255B'data-tab'%255D.value%253B%250A%2520%2520%2520%2520up.reload('.unpoly-content'%252C%2520%257B%250A%2520%2520%2520%2520%2520%2520url%252C%250A%2520%2520%2520%2520%2520%2520history%253A%2520false%252C%250A%2520%2520%2520%2520%257D)%253B%2520%252F%252F%2520get%2520the%2520URL%2520from%2520data-tab%2520value%250A%2520%2520%257D)%253B%250A%253C%252Fscript%253E%250A%250A%250A%253C!--%2520url%2520of%2520tab%25201%2520%253A%2520%252Funpoly%252Ftab-home%2520--%253E%250A%253Cdiv%2520class%253D%2522unpoly-content%2522%253E%250A%2520%2520this%2520is%2520home%2520tab%2520of%2520unpoly!%250A%253C%252Fdiv%253E%250A%250A%253C!--%2520url%2520of%2520tab%25202%2520%253A%2520%252Funpoly%252Ftab-home%2520--%253E%250A%253Cdiv%2520class%253D%2522unpoly-content%2522%253E%250A%2520%2520this%2520is%2520profile%2520tab%250A%253C%252Fdiv%253E%250A%250A"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
+    </div>
+    <div class="unpoly col-md-4">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-tab="/unpoly/tab-home">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-tab="/unpoly/tab-profile">My Profile</a>
+        </li>
+      </ul>
+      <div class="unpoly-content"></div>
+    </div>
+  </div>
+  <hr/>
 {% endblock %}
 
 {% block footerScript %}
@@ -42,6 +67,26 @@
       const $currentTabEl = $(`.tab-content [data-tab=${currentTab}]`);
       $currentTabEl.removeClass('d-none');
       $currentTabEl.siblings().addClass('d-none');
+    });
+
+    /* ------------------ jQuery ------------------ */
+    // default tab
+    up.reload('.unpoly-content', {
+      url: '/unpoly/tab-home',
+      history: false,
+    });
+    up.on('click', '.unpoly .nav-link', function(event, element) {
+      //Toggle tab link
+      document.querySelectorAll('.unpoly .nav-link').forEach((val) => {
+        val.classList.remove('active');
+      });
+      up.element.toggleClass(element, 'active');
+
+      const url = element.attributes['data-tab'].value;
+      up.reload('.unpoly-content', {
+        url,
+        history: false,
+      }); // get the URL from data-tab value
     });
   </script>
 {% endblock %}
