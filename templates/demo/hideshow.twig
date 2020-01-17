@@ -2,12 +2,17 @@
 
 {% block content %}
   <h2>jQuery</h2>
-  <div class="row mt-2 my-4">
+  <div class="jquery row mt-2 my-4">
     <div class="col-md-6">
-      this is code
+     this is code
     </div>
     <div class="col-md-6">
-      this is preview
+      <button class="btn btn-primary">
+        Toggle
+      </button>
+      <div class="text d-none">
+        this is sentence of the year!
+      </div>
     </div>
   </div>
 
@@ -17,9 +22,34 @@
 
   <hr/>
   <h2>Stimulus</h2>
-  <div class="row mt-2 my-4"></div>
+  <div class="row mt-2 my-4">
+
+  </div>
 
   <hr/>
   <h2>Alpine.js</h2>
   <div class="row mt-2 my-4"></div>
+{% endblock %}
+
+{% block footerScript %}
+  <script>
+    /* ------------------ jQuery ------------------ */
+    $('.jquery .btn').click(function() {
+      $('.jquery .text').toggleClass('d-none');
+    });
+
+    /* ------------------ stimulus ------------------ */
+    const application = Stimulus.Application.start();
+    application.register("hello", class extends Stimulus.Controller {
+      static get targets() {
+        return [
+          'text'
+        ];
+      }
+
+      toggleClass() {
+
+      }
+    })
+  </script>
 {% endblock %}
