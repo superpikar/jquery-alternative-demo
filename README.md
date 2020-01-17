@@ -38,4 +38,11 @@
     - by GUI : open http://jquery-alternative-demo.test/admin/install
     - by CLI : run `./craft setup` 
     
-- 
+- generate seeder data
+    ```
+    # generate 10 categories
+    ./craft seeder/generate/categories --group=newsCategory --count=10
+    
+    # generate 500 news
+    ./craft seeder/generate/entries --section=news --count=500
+    ```
