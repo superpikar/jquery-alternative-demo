@@ -21,9 +21,13 @@
           <a class="nav-link" href="#" data-tab="profile">My Profile</a>
         </li>
       </ul>
-      <div class="tab-content">
-        <div data-tab="home" class="">this is home tab</div>
-        <div data-tab="profile" class="d-none">this is profile tab</div>
+      <div class="tab-content mt-4">
+        <div data-tab="home" class="">
+          <img src="{{ siteUrl }}assets/home.jpg"/>
+        </div>
+        <div data-tab="profile" class="d-none">
+          <img src="{{ siteUrl }}assets/profile.jpg"/>
+        </div>
       </div>
     </div>
   </div>
@@ -47,7 +51,7 @@
           <a class="nav-link" data-tab="/unpoly/tab-profile">My Profile</a>
         </li>
       </ul>
-      <div class="unpoly-content"></div>
+      <div class="unpoly-content mt-4"></div>
     </div>
   </div>
   <hr/>
@@ -60,15 +64,27 @@
     <div class="alpine col-md-4" x-data="{ activeTab: 'home' }">
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" @click="activeTab='home'" :class="{ 'active': activeTab=='home' }">Homepage</a>
+          <a class="nav-link"
+             @click="activeTab='home'"
+             :class="{ 'active': activeTab=='home' }">
+            Homepage
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" @click="activeTab='profile'" :class="{ 'active': activeTab=='profile' }">My Profile</a>
+          <a class="nav-link"
+             @click="activeTab='profile'"
+             :class="{ 'active': activeTab=='profile' }">
+            My Profile
+          </a>
         </li>
       </ul>
-      <div class="tab-content">
-        <div data-tab="home" :class="{ 'd-none': activeTab!='home' }">this is home tab</div>
-        <div data-tab="profile" :class="{ 'd-none': activeTab!='profile' }">this is profile tab</div>
+      <div class="tab-content mt-4">
+        <div data-tab="home" :class="{ 'd-none': activeTab!='home' }">
+          <img src="{{ siteUrl }}assets/home.jpg"/>
+        </div>
+        <div data-tab="profile" :class="{ 'd-none': activeTab!='profile' }">
+          <img src="{{ siteUrl }}assets/profile.jpg"/>
+        </div>
       </div>
     </div>
   </div>
