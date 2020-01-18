@@ -21,8 +21,15 @@
 
     </div>
     <div class="unpoly col-md-4">
-      <input type="text" class="form-control" placeholder="search article">
-      <div class="unpoly-result mt-4"></div>
+      <form action="/demo/search-result" method="GET"
+            up-autosubmit
+            up-history="false"
+            up-target=".unpoly-result">
+        <input type="text" name="q" class="form-control" placeholder="search article">
+      </form>
+      <div class="mt-4">
+        <div class="unpoly-result"></div>
+      </div>
     </div>
   </div>
   <hr/>
@@ -62,8 +69,6 @@
         },
       });
     });
-
-    /* ------------------ unpoly ------------------ */
 
     /* ------------------ stimulus ------------------ */
 
