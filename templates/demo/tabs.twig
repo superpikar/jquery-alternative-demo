@@ -51,6 +51,28 @@
     </div>
   </div>
   <hr/>
+
+  <h2>Alpine</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+
+    </div>
+    <div class="alpine col-md-4" x-data="{ activeTab: 'home' }">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" @click="activeTab='home'" :class="{ 'active': activeTab=='home' }">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" @click="activeTab='profile'" :class="{ 'active': activeTab=='profile' }">My Profile</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div data-tab="home" :class="{ 'd-none': activeTab!='home' }">this is home tab</div>
+        <div data-tab="profile" :class="{ 'd-none': activeTab!='profile' }">this is profile tab</div>
+      </div>
+    </div>
+  </div>
+  <hr/>
 {% endblock %}
 
 {% block footerScript %}
