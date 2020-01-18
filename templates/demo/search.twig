@@ -1,0 +1,78 @@
+{% extends "_layouts/base.twig" %}
+
+{% set pageTitle = 'Search' %}
+
+{% block content %}
+  <h2>jQuery</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+
+    </div>
+    <div class="jquery col-md-4">
+      <input type="text" class="form-control" placeholder="search article">
+      <div class="result mt-4"></div>
+    </div>
+  </div>
+  <hr/>
+
+  <h2>Unpoly</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+
+    </div>
+    <div class="unpoly col-md-4">
+      <input type="text" class="form-control" placeholder="search article">
+      <div class="unpoly-result mt-4"></div>
+    </div>
+  </div>
+  <hr/>
+
+  <h2>Stimulus</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+
+    </div>
+    <div class="stimulus col-md-4" data-controller="hello">
+      <input type="text" class="form-control" placeholder="search article">
+      <div class="result mt-4"></div>
+    </div>
+  </div>
+  <hr/>
+
+  <h2>Alpine.js</h2>
+  <div class="row mt-2 my-4">
+    <div class="code col-md-8">
+
+    </div>
+    <div class="alpine col-md-4" x-data="alpineSearch()">
+      <input type="text" x-model="searchText" @keyup="search()" class="form-control" placeholder="search article">
+      <div class="result mt-4" x-html="searchResult"></div>
+    </div>
+  </div>
+  <hr/>
+{% endblock %}
+
+{% block footerScript %}
+  <script>
+    /* ------------------ jQuery ------------------ */
+
+    /* ------------------ unpoly ------------------ */
+
+    /* ------------------ stimulus ------------------ */
+
+    /* ------------------ alpine ------------------ */
+    function alpineSearch() {
+      return {
+        searchText: '',
+        searchResult: '',
+        search() {
+          fetch(`/demo/search-result?q=${this.searchText}`)
+            .then(response => response.text())
+            .then((response) => {
+              this.searchResult = response;
+            });
+        }
+      }
+    }
+  </script>
+{% endblock %}

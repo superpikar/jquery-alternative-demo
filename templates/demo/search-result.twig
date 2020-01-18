@@ -1,0 +1,28 @@
+{% set searchText = craft.app.request.getQueryParam('q') %}
+
+{% if searchText is not empty %}
+  {% set entries = craft.entries()
+    .search(searchText)
+    .with(['newsCategory'])
+    .all()
+  %}
+  <div class="alert alert-primary" role="alert">
+    looking for "{{ searchText }}", found {{ entries|length }}
+  </div>
+  <div class="mt-4">
+    {% for item in entries %}
+      <div class="media mb-3">
+        <img src="{{ siteUrl }}assets/thumb.jpg" style="width: 75px;" class="mr-3" alt="thumb">
+        <div class="media-body">
+          <h5 class="mb-0">{{ item.title }}</h5>
+          <p class="text-secondary mb-1">{{ item.newsCategory[0].title }}</p>
+          <div class="text-sm">{{ item.body|raw }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="alert alert-danger" role="alert">
+    empty search, please write down the keyword
+  </div>
+{% endif %}
