@@ -40,8 +40,12 @@
 
     </div>
     <div class="stimulus col-md-4" data-controller="hello">
-      <input type="text" class="form-control" placeholder="search article">
-      <div class="result mt-4"></div>
+      <input type="text" class="form-control" placeholder="search article"
+             data-target="hello.text"
+             data-action="keyup->hello#search">
+      <div class="result mt-4"
+           data-target="hello.result"
+      ></div>
     </div>
   </div>
   <hr/>
@@ -52,7 +56,9 @@
 
     </div>
     <div class="alpine col-md-4" x-data="alpineSearch()">
-      <input type="text" x-model="searchText" @keyup="search()" class="form-control" placeholder="search article">
+      <input type="text" class="form-control" placeholder="search article"
+             x-model="searchText"
+             @keyup="search()" >
       <div class="result mt-4" x-html="searchResult"></div>
     </div>
   </div>
@@ -71,6 +77,23 @@
     });
 
     /* ------------------ stimulus ------------------ */
+    const application = Stimulus.Application.start();
+    application.register("hello", class extends Stimulus.Controller {
+      static get targets() {
+        return [
+          'text',
+          'result'
+        ];
+      }
+
+      search() {
+        fetch(`/demo/search-result?q=${this.textTarget.value}`)
+          .then(response => response.text())
+          .then((response) => {
+            this.resultTarget.innerHTML = response;
+          });
+      }
+    });
 
     /* ------------------ alpine ------------------ */
     function alpineSearch() {
