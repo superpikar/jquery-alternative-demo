@@ -18,7 +18,10 @@
           <img src="{{ siteUrl }}assets/thumb.jpg" style="width: 75px;" class="mr-3" alt="thumb">
           <div class="media-body">
             <h5 class="mb-0">{{ item.title }}</h5>
-            <p class="text-secondary mb-1">{{ item.newsCategory[0].title }}</p>
+            <div class="text-secondary mb-1 d-flex">
+              <div class="circle mr-2" style="background: {{ item.newsCategory[0].backgroundColor.getHex() }}"></div>
+              {{ item.newsCategory[0].title }}
+            </div>
             <div class="text-sm">{{ item.body|raw }}</div>
           </div>
         </div>
