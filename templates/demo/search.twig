@@ -55,6 +55,13 @@
 {% block footerScript %}
   <script>
     /* ------------------ jQuery ------------------ */
+    $('.jquery .form-control').on('keyup', (event) => {
+      $.ajax(`/demo/search-result?q=${event.target.value}`, {
+        success(response) {
+          $('.jquery .result').html(response);
+        },
+      });
+    });
 
     /* ------------------ unpoly ------------------ */
 
