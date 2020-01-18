@@ -1,6 +1,8 @@
 {% set searchText = craft.app.request.getQueryParam('q') %}
+{% set mode = craft.app.request.getQueryParam('mode') %}
+{% set class = mode == 'unpoly' ? 'unpoly-result' : '' %}
 
-<div class="unpoly-result">
+<div class="{{ class }}">
   {% if searchText is not empty %}
     {% set entries = craft.entries()
       .search(searchText)

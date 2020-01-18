@@ -6,7 +6,11 @@
   <h2>jQuery</h2>
   <div class="row mt-2 my-4">
     <div class="code col-md-8">
-
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522jquery%2520col-md-4%2522%253E%250A%2520%2520%253Cinput%2520type%253D%2522text%2522%2520class%253D%2522form-control%2522%2520placeholder%253D%2522search%2520article%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522result%2520mt-4%2522%253E%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F*%2520------------------%2520jQuery%2520------------------%2520*%252F%250A%2520%2520%2524('.jquery%2520.form-control').on('keyup'%252C%2520(event)%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2524.ajax(%2560%252Fdemo%252Fsearch-result%253Fq%253D%2524%257Bevent.target.value%257D%2560%252C%2520%257B%250A%2520%2520%2520%2520%2520%2520success(response)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2524('.jquery%2520.result').html(response)%253B%250A%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%257D)%253B%250A%2520%2520%257D)%253B%250A%253C%252Fscript%253E"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
     </div>
     <div class="jquery col-md-4">
       <input type="text" class="form-control" placeholder="search article">
@@ -18,7 +22,11 @@
   <h2>Unpoly</h2>
   <div class="row mt-2 my-4">
     <div class="code col-md-8">
-
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522unpoly%2520col-md-4%2522%253E%250A%2520%2520%253Cform%2520action%253D%2522%252Fdemo%252Fsearch-result%2522%2520method%253D%2522GET%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520up-autosubmit%250A%2520%2520%2520%2520%2520%2520%2520%2520up-history%253D%2522false%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520up-target%253D%2522.unpoly-result%2522%253E%250A%2520%2520%2520%2520%253Cinput%2520type%253D%2522text%2522%2520name%253D%2522q%2522%2520class%253D%2522form-control%2522%2520placeholder%253D%2522search%2520article%2522%253E%250A%2520%2520%253C%252Fform%253E%250A%2520%2520%253Cdiv%2520class%253D%2522mt-4%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522unpoly-result%2522%253E%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
     </div>
     <div class="unpoly col-md-4">
       <form action="/demo/search-result" method="GET"
@@ -26,6 +34,7 @@
             up-history="false"
             up-target=".unpoly-result">
         <input type="text" name="q" class="form-control" placeholder="search article">
+        <input type="hidden" name="mode" value="unpoly">
       </form>
       <div class="mt-4">
         <div class="unpoly-result"></div>
@@ -37,7 +46,11 @@
   <h2>Stimulus</h2>
   <div class="row mt-2 my-4">
     <div class="code col-md-8">
-
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522stimulus%2520col-md-4%2522%2520data-controller%253D%2522hello%2522%253E%250A%2520%2520%253Cinput%2520type%253D%2522text%2522%2520class%253D%2522form-control%2522%2520placeholder%253D%2522search%2520article%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520data-target%253D%2522hello.text%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520data-action%253D%2522keyup-%253Ehello%2523search%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522result%2520mt-4%2522%250A%2520%2520%2520%2520%2520%2520%2520data-target%253D%2522hello.result%2522%250A%2520%2520%253E%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F*%2520------------------%2520stimulus%2520------------------%2520*%252F%250A%2520%2520const%2520application%2520%253D%2520Stimulus.Application.start()%253B%250A%2520%2520application.register(%2522hello%2522%252C%2520class%2520extends%2520Stimulus.Controller%2520%257B%250A%2520%2520%2520%2520static%2520get%2520targets()%2520%257B%250A%2520%2520%2520%2520%2520%2520return%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520'text'%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520'result'%250A%2520%2520%2520%2520%2520%2520%255D%253B%250A%2520%2520%2520%2520%257D%250A%250A%2520%2520%2520%2520search()%2520%257B%250A%2520%2520%2520%2520%2520%2520fetch(%2560%252Fdemo%252Fsearch-result%253Fq%253D%2524%257Bthis.textTarget.value%257D%2560)%250A%2520%2520%2520%2520%2520%2520%2520%2520.then(response%2520%253D%253E%2520response.text())%250A%2520%2520%2520%2520%2520%2520%2520%2520.then((response)%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520this.resultTarget.innerHTML%2520%253D%2520response%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D)%253B%250A%253C%252Fscript%253E"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
     </div>
     <div class="stimulus col-md-4" data-controller="hello">
       <input type="text" class="form-control" placeholder="search article"
@@ -53,7 +66,11 @@
   <h2>Alpine.js</h2>
   <div class="row mt-2 my-4">
     <div class="code col-md-8">
-
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=1x&wm=false&code=%253Cdiv%2520class%253D%2522alpine%2520col-md-4%2522%2520x-data%253D%2522alpineSearch()%2522%253E%250A%2520%2520%253Cinput%2520type%253D%2522text%2522%2520class%253D%2522form-control%2522%2520placeholder%253D%2522search%2520article%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520x-model%253D%2522searchText%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2540keyup%253D%2522search()%2522%2520%253E%250A%2520%2520%253Cdiv%2520class%253D%2522result%2520mt-4%2522%2520x-html%253D%2522searchResult%2522%253E%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%253E%250A%2520%2520%252F*%2520------------------%2520alpine%2520------------------%2520*%252F%250A%2520%2520function%2520alpineSearch()%2520%257B%250A%2520%2520%2520%2520return%2520%257B%250A%2520%2520%2520%2520%2520%2520searchText%253A%2520''%252C%250A%2520%2520%2520%2520%2520%2520searchResult%253A%2520''%252C%250A%2520%2520%2520%2520%2520%2520search()%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520fetch(%2560%252Fdemo%252Fsearch-result%253Fq%253D%2524%257Bthis.searchText%257D%2560)%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.then(response%2520%253D%253E%2520response.text())%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.then((response)%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520this.searchResult%2520%253D%2520response%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%253C%252Fscript%253E"
+        style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
     </div>
     <div class="alpine col-md-4" x-data="alpineSearch()">
       <input type="text" class="form-control" placeholder="search article"
